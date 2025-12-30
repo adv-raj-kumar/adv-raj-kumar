@@ -343,9 +343,26 @@ footer{
 <a href="https://wa.me/918929555414" class="whatsapp-float" target="_blank"></a>
 
 <script>
-function acceptDisclaimer(){
-  document.getElementById("disclaimerModal").style.display = "none";
-}
+  const disclaimer = document.getElementById("disclaimerModal");
+  const acceptedTime = localStorage.getItem("disclaimerAcceptedTime");
+
+  const now = new Date().getTime();
+  const hours24 = 24 * 60 * 60 * 1000; // 24 hours
+
+  if (!acceptedTime || (now - acceptedTime) > hours24) {
+    disclaimer.style.display = "flex";
+  } else {
+    disclaimer.style.display = "none";
+  }
+
+  function acceptDisclaimer() {
+    localStorage.setItem("disclaimerAcceptedTime", new Date().getTime());
+    disclaimer.style.display = "none";
+  }
+
+  function declineDisclaimer() {
+    window.location.href = "https://www.google.com";
+  }
 </script>
 
 </body>
