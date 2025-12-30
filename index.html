@@ -9,244 +9,199 @@
 :root{
   --primary:#0b3c5d;
   --secondary:#caa85b;
+  --dark:#1a1a1a;
   --light:#f6f8fa;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Segoe UI',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
 
 body{
   background:var(--light);
   color:#222;
-  line-height:1.7;
+  line-height:1.6;
 }
 
 /* HEADER */
 header{
   background:var(--primary);
   color:#fff;
-  padding:16px 30px;
+  padding:18px 30px;
   display:flex;
   justify-content:space-between;
   align-items:center;
   flex-wrap:wrap;
 }
 
-header h1{font-size:22px;font-weight:600}
-header span{font-size:14px;opacity:.9}
-
-.nav-links a{
-  margin-left:10px;
-  padding:8px 14px;
-  background:var(--secondary);
-  color:#000;
-  border-radius:6px;
-  text-decoration:none;
+header h1{
+  font-size:22px;
   font-weight:600;
+}
+
+header span{
+  font-size:13px;
+  opacity:.9;
 }
 
 /* HERO */
 .hero{
-  background:linear-gradient(rgba(11,60,93,.9),rgba(11,60,93,.9));
+  background:#1e4d6b;
   color:#fff;
-  padding:90px 20px;
+  padding:50px 20px;
 }
 
-.hero-flex{
-  max-width:1200px;
+.hero-container{
+  max-width:1100px;
   margin:auto;
   display:flex;
+  flex-wrap:wrap;
   align-items:center;
-  justify-content:space-between;
-  gap:50px;
+  gap:30px;
 }
 
-.hero h2{
-  font-size:40px;
+.hero-text{
+  flex:1;
 }
 
-.hero h2::after{
-  content:"";
-  display:block;
-  width:70px;
-  height:3px;
-  background:var(--secondary);
-  margin-top:10px;
+.hero-text h2{
+  font-size:32px;
+  margin-bottom:10px;
 }
 
-.hero p{
-  font-size:18px;
-  margin:20px 0 30px;
+.hero-text p{
+  font-size:16px;
+  opacity:.95;
 }
 
-.hero .btns a{
-  margin:6px 6px 6px 0;
-  padding:13px 20px;
-  border-radius:6px;
-  text-decoration:none;
-  font-weight:600;
+.buttons{
+  margin-top:20px;
+}
+
+.btn{
   display:inline-block;
-}
-
-/* BUTTONS */
-.home-btn{background:#fff;color:#000}
-.civil-btn{background:var(--secondary);color:#000}
-.criminal-btn{
+  padding:10px 18px;
+  margin-right:10px;
+  margin-bottom:10px;
   background:#fff;
   color:#000;
-  border:2px solid var(--secondary);
-}
-.whatsapp-btn{background:#25D366;color:#000}
-
-/* HERO IMAGE */
-.hero-photo img{
-  width:300px;
-  height:380px;
-  object-fit:cover;
-  border-radius:12px;
-  border:4px solid var(--secondary);
-  box-shadow:0 14px 30px rgba(0,0,0,.35);
-  background:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:600;
 }
 
-/* SECTION */
-section{
-  padding:60px 20px;
-  max-width:1200px;
-  margin:auto;
+.btn.whatsapp{
+  background:#25D366;
+  color:#fff;
 }
 
-.section-title{
-  text-align:center;
-  margin-bottom:35px;
+/* TRUST BOX */
+.trust-box{
+  flex:1;
+  background:#ffffff;
+  color:#000;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
-.section-title h3{
-  font-size:28px;
-  color:var(--primary);
+.trust-box ul{
+  list-style:none;
+  line-height:2;
+  font-weight:500;
 }
 
 /* PRACTICE */
-.grid{
+.section{
+  padding:50px 20px;
+}
+
+.section h2{
+  text-align:center;
+  color:var(--primary);
+  margin-bottom:30px;
+}
+
+.practice-grid{
+  max-width:1100px;
+  margin:auto;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:22px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
 .card{
   background:#fff;
-  padding:22px;
-  border-radius:8px;
-  border:1px solid #ddd;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
+  text-align:center;
+  font-weight:500;
 }
 
 /* FOOTER */
 footer{
-  background:#111;
-  color:#ccc;
+  background:var(--dark);
+  color:#aaa;
   text-align:center;
-  padding:25px;
+  padding:15px;
   font-size:14px;
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp-float{
-  position:fixed;
-  bottom:25px;
-  right:25px;
-  background:#25D366;
-  color:#fff;
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:30px;
-  box-shadow:0 8px 20px rgba(0,0,0,.3);
-  z-index:9999;
-  text-decoration:none;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .hero-flex{
-    flex-direction:column;
-    text-align:center;
-  }
-  .hero-photo img{
-    width:220px;
-    height:280px;
-    margin-top:20px;
-  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
   <div>
     <h1>Adv. Raj Kumar</h1>
     <span>Delhi High Court & District Courts</span>
   </div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="#practice">Practice</a>
-  </div>
 </header>
 
-<!-- HERO / HOME -->
 <section class="hero">
-  <div class="hero-flex">
-    <div>
-      <h2>Adv. Raj Kumar</h2>
+  <div class="hero-container">
+
+    <div class="hero-text">
+      <h2>Advocate for Civil & Criminal Matters</h2>
       <p>
-        Advocate practicing before the Delhi High Court and District Courts,
-        providing professional, ethical and client-focused legal representation.
+        Practicing before the Delhi High Court and District Courts,
+        providing strategic, ethical and confidential legal representation.
       </p>
 
-      <div class="btns">
-        <a class="home-btn" href="index.html">🏠 Home</a>
-        <a class="civil-btn" href="#practice">⚖️ Civil Matters</a>
-        <a class="criminal-btn" href="#practice">🚨 Criminal Matters</a>
-        <a class="whatsapp-btn" href="https://wa.me/918929555414">💬 WhatsApp</a>
+      <div class="buttons">
+        <a href="index.html" class="btn">🏠 Home</a>
+        <a href="civil.html" class="btn">⚖ Civil Matters</a>
+        <a href="criminal.html" class="btn">🚔 Criminal Matters</a>
+        <a href="https://wa.me/918929555414/7903801274" class="btn whatsapp">💬 WhatsApp</a>
       </div>
     </div>
 
-    <div class="hero-photo">
-      <img src="./raj-kumar.jpg" alt="Advocate Raj Kumar Delhi High Court">
+    <div class="trust-box">
+      <ul>
+        <li>✔ Delhi High Court & District Courts</li>
+        <li>✔ Criminal Defense & Bail Matters</li>
+        <li>✔ Civil Litigation & Property Disputes</li>
+        <li>✔ Confidential Consultation</li>
+      </ul>
     </div>
+
   </div>
 </section>
 
-<!-- PRACTICE AREAS -->
-<section id="practice">
-  <div class="section-title">
-    <h3>Practice Areas</h3>
-  </div>
+<section class="section">
+  <h2>Practice Areas</h2>
 
-  <div class="grid">
-    <div class="card">Criminal Law & Bail Matters</div>
+  <div class="practice-grid">
+    <div class="card">Criminal Defense & Bail Matters</div>
     <div class="card">Civil Litigation & Property Disputes</div>
-    <div class="card">Banking & Cheque Bounce Matters</div>
+    <div class="card">Cheque Bounce & Banking Matters</div>
     <div class="card">Family & Matrimonial Law</div>
   </div>
 </section>
 
 <footer>
-  © 2025 Adv. Raj Kumar | All Rights Reserved
+  © 2025 Adv. Raj Kumar | Delhi High Court & District Courts  
+  <br>Legal consultation by prior appointment only.
 </footer>
-
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/918929555414" class="whatsapp-float" target="_blank">💬</a>
 
 </body>
 </html>
-
-
