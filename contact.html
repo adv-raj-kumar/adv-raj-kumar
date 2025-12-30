@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact | Adv. Raj Kumar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --primary:#0b3c5d;
+  --secondary:#caa85b;
+  --dark:#1a1a1a;
+  --light:#f6f8fa;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+
+body{
+  background:var(--light);
+  color:#222;
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  background:var(--primary);
+  color:#fff;
+  padding:18px 30px;
+}
+
+header h1{
+  font-size:22px;
+  font-weight:600;
+}
+
+/* CONTACT SECTION */
+.contact-section{
+  padding:70px 20px;
+}
+
+.contact-box{
+  max-width:950px;
+  margin:auto;
+  background:#fff;
+  padding:45px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.contact-box h2{
+  color:#0b3c5d;
+  font-size:30px;
+  margin-bottom:20px;
+  text-align:center;
+}
+
+.contact-item{
+  margin-bottom:20px;
+}
+
+.contact-item h3{
+  color:#0b3c5d;
+  font-size:18px;
+  margin-bottom:6px;
+}
+
+.contact-item p{
+  font-size:15px;
+  line-height:1.7;
+}
+
+/* BUTTONS */
+.contact-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+  margin-top:30px;
+}
+
+.contact-btn{
+  padding:14px 24px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:15px;
+}
+
+.contact-btn.call{
+  background:#0b3c5d;
+  color:#fff;
+}
+
+.contact-btn.whatsapp{
+  background:#25D366;
+  color:#fff;
+}
+
+/* FOOTER */
+footer{
+  background:var(--dark);
+  color:#aaa;
+  text-align:center;
+  padding:18px;
+  font-size:13px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+  position:fixed;
+  width:56px;
+  height:56px;
+  bottom:20px;
+  right:18px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 6px 18px rgba(0,0,0,.35);
+  z-index:9999;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.whatsapp-float img{
+  width:32px;
+  height:32px;
+}
+
+.whatsapp-float:active{
+  transform:scale(.95);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Contact – Adv. Raj Kumar</h1>
+</header>
+
+<section class="contact-section">
+  <div class="contact-box">
+
+    <h2>Consultation & Contact Details</h2>
+
+    <div class="contact-item">
+      <h3>📞 Contact Numbers</h3>
+      <p>
+        Call: <strong>+91 79038 01274</strong><br>
+        WhatsApp (Only): <strong>+91 89295 55414</strong>
+      </p>
+    </div>
+
+    <div class="contact-item">
+      <h3>⚖ Chambers</h3>
+      <p>
+        <strong>Chamber No. 34</strong>, Civil Side,<br>
+        Tis Hazari Courts, New Delhi
+      </p>
+      <p>
+        <strong>Chamber No. 329</strong>,<br>
+        Patiala House Courts, New Delhi
+      </p>
+    </div>
+
+    <div class="contact-item">
+      <h3>🏢 Office Address</h3>
+      <p>
+        3rd Floor, Hira Complex,<br>
+        Shakarpur, New Delhi
+      </p>
+    </div>
+
+    <div class="contact-buttons">
+      <a href="tel:+917903801274" class="contact-btn call">📞 Call Now</a>
+      <a href="https://wa.me/918929555414" class="contact-btn whatsapp">💬 WhatsApp</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 Adv. Raj Kumar | Delhi High Court & District Courts  
+  <br>
+  Disclaimer: This website is for informational purposes only and does not constitute
+  solicitation or legal advice.
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/918929555414" class="whatsapp-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+</body>
+</html>
