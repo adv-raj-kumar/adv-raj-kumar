@@ -13,7 +13,7 @@
   --light:#f6f8fa;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
 
 body{
   background:var(--light);
@@ -26,10 +26,6 @@ header{
   background:var(--primary);
   color:#fff;
   padding:18px 30px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
 }
 
 header h1{
@@ -46,7 +42,7 @@ header span{
 .hero{
   background:#1e4d6b;
   color:#fff;
-  padding:50px 20px;
+  padding:60px 20px;
 }
 
 .hero-container{
@@ -54,8 +50,8 @@ header span{
   margin:auto;
   display:flex;
   flex-wrap:wrap;
-  align-items:center;
   gap:30px;
+  align-items:center;
 }
 
 .hero-text{
@@ -64,7 +60,7 @@ header span{
 
 .hero-text h2{
   font-size:32px;
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
 .hero-text p{
@@ -96,9 +92,9 @@ header span{
 /* TRUST BOX */
 .trust-box{
   flex:1;
-  background:#ffffff;
+  background:#fff;
   color:#000;
-  padding:20px;
+  padding:25px;
   border-radius:10px;
   box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
@@ -109,32 +105,104 @@ header span{
   font-weight:500;
 }
 
-/* PRACTICE */
+/* PRACTICE AREAS */
 .section{
-  padding:50px 20px;
+  padding:60px 20px;
 }
 
 .section h2{
   text-align:center;
   color:var(--primary);
-  margin-bottom:30px;
+  margin-bottom:40px;
+  font-size:28px;
 }
 
 .practice-grid{
   max-width:1100px;
   margin:auto;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
 }
 
-.card{
+.practice-card{
   background:#fff;
   padding:25px;
-  border-radius:10px;
+  border-radius:8px;
   box-shadow:0 5px 20px rgba(0,0,0,.08);
   text-align:center;
-  font-weight:500;
+}
+
+.practice-card h3{
+  color:var(--primary);
+  margin-bottom:12px;
+}
+
+.practice-card p{
+  font-size:14px;
+  margin-bottom:15px;
+}
+
+.practice-card a{
+  display:inline-block;
+  padding:8px 14px;
+  background:var(--secondary);
+  color:#000;
+  text-decoration:none;
+  border-radius:5px;
+  font-weight:600;
+}
+
+/* CONSULTATION / CONTACT SECTION */
+.consult-section{
+  background:#0b3c5d;
+  padding:70px 20px;
+}
+
+.consult-box{
+  max-width:900px;
+  margin:auto;
+  background:#fff;
+  padding:40px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.consult-box h2{
+  color:#0b3c5d;
+  font-size:30px;
+  margin-bottom:15px;
+}
+
+.consult-box p{
+  font-size:15px;
+  line-height:1.7;
+  margin-bottom:25px;
+}
+
+.consult-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.consult-btn{
+  padding:12px 22px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.consult-btn.call{
+  background:#0b3c5d;
+  color:#fff;
+}
+
+.consult-btn.whatsapp{
+  background:#25D366;
+  color:#fff;
 }
 
 /* FOOTER */
@@ -142,8 +210,34 @@ footer{
   background:var(--dark);
   color:#aaa;
   text-align:center;
-  padding:15px;
-  font-size:14px;
+  padding:18px;
+  font-size:13px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+  position:fixed;
+  width:56px;
+  height:56px;
+  bottom:20px;
+  right:18px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 6px 18px rgba(0,0,0,.35);
+  z-index:9999;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.whatsapp-float img{
+  width:32px;
+  height:32px;
+}
+
+.whatsapp-float:active{
+  transform:scale(.95);
 }
 </style>
 </head>
@@ -151,10 +245,8 @@ footer{
 <body>
 
 <header>
-  <div>
-    <h1>Adv. Raj Kumar</h1>
-    <span>Delhi High Court & District Courts</span>
-  </div>
+  <h1>Adv. Raj Kumar</h1>
+  <span>Delhi High Court & District Courts</span>
 </header>
 
 <section class="hero">
@@ -171,7 +263,8 @@ footer{
         <a href="index.html" class="btn">🏠 Home</a>
         <a href="civil.html" class="btn">⚖ Civil Matters</a>
         <a href="criminal.html" class="btn">🚔 Criminal Matters</a>
-        <a href="https://wa.me/918929555414/7903801274" class="btn whatsapp">💬 WhatsApp</a>
+        <a href="#contact" class="btn">📍 Contact</a>
+        <a href="https://wa.me/918929555414" class="btn whatsapp">💬 WhatsApp</a>
       </div>
     </div>
 
@@ -179,8 +272,8 @@ footer{
       <ul>
         <li>✔ Delhi High Court & District Courts</li>
         <li>✔ Criminal Defense & Bail Matters</li>
-        <li>✔ Civil Litigation & Property Disputes</li>
-        <li>✔ Confidential Consultation</li>
+        <li>✔ Civil & Property Disputes</li>
+        <li>✔ Consultation by Appointment Only</li>
       </ul>
     </div>
 
@@ -191,17 +284,57 @@ footer{
   <h2>Practice Areas</h2>
 
   <div class="practice-grid">
-    <div class="card">Criminal Defense & Bail Matters</div>
-    <div class="card">Civil Litigation & Property Disputes</div>
-    <div class="card">Cheque Bounce & Banking Matters</div>
-    <div class="card">Family & Matrimonial Law</div>
+    <div class="practice-card">
+      <h3>Criminal Law & Bail</h3>
+      <p>Defense, bail, FIR quashing, trial and appeals.</p>
+      <a href="criminal.html">Read More</a>
+    </div>
+
+    <div class="practice-card">
+      <h3>Civil Litigation</h3>
+      <p>Injunctions, recovery suits and civil disputes.</p>
+      <a href="civil.html">Read More</a>
+    </div>
+
+    <div class="practice-card">
+      <h3>Property Disputes</h3>
+      <p>Builder-buyer, title, possession and partition.</p>
+    </div>
+
+    <div class="practice-card">
+      <h3>Cheque Bounce (NI Act)</h3>
+      <p>Complete handling from notice to execution.</p>
+    </div>
+  </div>
+</section>
+
+<section class="consult-section" id="contact">
+  <div class="consult-box">
+    <h2>Consultation & Contact</h2>
+    <p>
+      For professional legal consultation and appointment requests,
+      please connect through phone call or WhatsApp.
+      All consultations are strictly by prior appointment.
+    </p>
+
+    <div class="consult-buttons">
+      <a href="tel:+918929555414" class="consult-btn call">📞 Call Now</a>
+      <a href="https://wa.me/918929555414" class="consult-btn whatsapp">💬 WhatsApp</a>
+    </div>
   </div>
 </section>
 
 <footer>
   © 2025 Adv. Raj Kumar | Delhi High Court & District Courts  
-  <br>Legal consultation by prior appointment only.
+  <br>
+  Disclaimer: This website is for informational purposes only and does not constitute
+  solicitation or legal advice.
 </footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/918929555414" class="whatsapp-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
 
 </body>
 </html>
