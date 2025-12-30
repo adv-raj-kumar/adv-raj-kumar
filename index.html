@@ -40,7 +40,7 @@ header h1{font-size:22px;font-weight:600}
 header span{font-size:14px;opacity:.9}
 
 .nav-links a{
-  margin-left:12px;
+  margin-left:10px;
   padding:8px 14px;
   background:var(--secondary);
   color:#000;
@@ -51,8 +51,7 @@ header span{font-size:14px;opacity:.9}
 
 /* HERO */
 .hero{
-  background:linear-gradient(rgba(11,60,93,.85),rgba(11,60,93,.85)),
-  url('law-bg.jpg') center/cover no-repeat;
+  background:linear-gradient(rgba(11,60,93,.9),rgba(11,60,93,.9));
   color:#fff;
   padding:90px 20px;
 }
@@ -85,17 +84,25 @@ header span{font-size:14px;opacity:.9}
 }
 
 .hero .btns a{
-  margin-right:12px;
-  padding:14px 22px;
+  margin:6px 6px 6px 0;
+  padding:13px 20px;
   border-radius:6px;
   text-decoration:none;
   font-weight:600;
   display:inline-block;
 }
 
-.call{background:#fff;color:#000}
-.whatsapp{background:#25D366;color:#000}
+/* BUTTONS */
+.home-btn{background:#fff;color:#000}
+.civil-btn{background:var(--secondary);color:#000}
+.criminal-btn{
+  background:#fff;
+  color:#000;
+  border:2px solid var(--secondary);
+}
+.whatsapp-btn{background:#25D366;color:#000}
 
+/* HERO IMAGE */
 .hero-photo img{
   width:300px;
   height:380px;
@@ -103,6 +110,7 @@ header span{font-size:14px;opacity:.9}
   border-radius:12px;
   border:4px solid var(--secondary);
   box-shadow:0 14px 30px rgba(0,0,0,.35);
+  background:#fff;
 }
 
 /* SECTION */
@@ -122,19 +130,6 @@ section{
   color:var(--primary);
 }
 
-.section-title p{color:#555}
-
-/* ABOUT */
-.about-box{
-  background:#fff;
-  padding:35px;
-  border-radius:10px;
-  box-shadow:0 8px 18px rgba(0,0,0,.08);
-}
-
-.about-box ul{margin-top:15px}
-.about-box li{margin-bottom:10px}
-
 /* PRACTICE */
 .grid{
   display:grid;
@@ -147,50 +142,6 @@ section{
   padding:22px;
   border-radius:8px;
   border:1px solid #ddd;
-  transition:.3s;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 12px 25px rgba(0,0,0,.12);
-}
-
-.card h4{
-  color:var(--primary);
-  margin-bottom:8px;
-}
-
-/* CONTACT */
-.contact{
-  background:var(--primary);
-  color:#fff;
-  padding:35px;
-  border-radius:10px;
-}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-}
-
-.contact input,
-.contact textarea{
-  width:100%;
-  padding:12px;
-  border:none;
-  border-radius:6px;
-  margin-bottom:12px;
-}
-
-.contact button{
-  width:100%;
-  padding:14px;
-  border:none;
-  background:var(--secondary);
-  font-weight:700;
-  border-radius:6px;
-  cursor:pointer;
 }
 
 /* FOOTER */
@@ -201,8 +152,6 @@ footer{
   padding:25px;
   font-size:14px;
 }
-
-footer a{color:var(--secondary);text-decoration:none}
 
 /* WHATSAPP FLOAT */
 .whatsapp-float{
@@ -232,26 +181,27 @@ footer a{color:var(--secondary);text-decoration:none}
   .hero-photo img{
     width:220px;
     height:280px;
+    margin-top:20px;
   }
-  .contact-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
   <div>
     <h1>Adv. Raj Kumar</h1>
     <span>Delhi High Court & District Courts</span>
   </div>
   <div class="nav-links">
+    <a href="index.html">Home</a>
     <a href="#practice">Practice</a>
-    <a href="tel:7903801274">📞 Call</a>
   </div>
 </header>
 
-<!-- HERO -->
+<!-- HERO / HOME -->
 <section class="hero">
   <div class="hero-flex">
     <div>
@@ -260,92 +210,37 @@ footer a{color:var(--secondary);text-decoration:none}
         Advocate practicing before the Delhi High Court and District Courts,
         providing professional, ethical and client-focused legal representation.
       </p>
+
       <div class="btns">
-        <a class="call" href="tel:7903801274">Call Now</a>
-        <a class="whatsapp" href="https://wa.me/918929555414">WhatsApp</a>
+        <a class="home-btn" href="index.html">🏠 Home</a>
+        <a class="civil-btn" href="#practice">⚖️ Civil Matters</a>
+        <a class="criminal-btn" href="#practice">🚨 Criminal Matters</a>
+        <a class="whatsapp-btn" href="https://wa.me/918929555414">💬 WhatsApp</a>
       </div>
     </div>
 
     <div class="hero-photo">
-      <img src="raj-kumar.jpg" alt="Advocate Raj Kumar">
+      <img src="./raj-kumar.jpg" alt="Advocate Raj Kumar Delhi High Court">
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section>
-  <div class="section-title">
-    <h3>About Advocate</h3>
-    <p>Professional • Ethical • Client-Focused</p>
-  </div>
-
-  <div class="about-box">
-    <p>
-      <strong>Adv. Raj Kumar</strong> is a practicing advocate before the
-      <strong>Delhi High Court</strong> and District Courts of Delhi, handling
-      civil, criminal, banking and family law matters with diligence and integrity.
-    </p>
-
-    <ul>
-      <li>✔ Strategic legal advice</li>
-      <li>✔ Strong drafting & court arguments</li>
-      <li>✔ Transparent and ethical practice</li>
-    </ul>
-
-    <p style="margin-top:15px;">
-      📧 <strong>Email:</strong>
-      <a href="mailto:advraj.krr@gmail.com">advraj.krr@gmail.com</a>
-    </p>
-  </div>
-</section>
-
-<!-- PRACTICE -->
+<!-- PRACTICE AREAS -->
 <section id="practice">
   <div class="section-title">
     <h3>Practice Areas</h3>
-    <p>Comprehensive Legal Services</p>
   </div>
 
   <div class="grid">
-    <div class="card"><h4>Criminal Law</h4><p>FIR, Trial, Defence & Appeals.</p></div>
-    <div class="card"><h4>Bail Matters</h4><p>Regular & Anticipatory Bail.</p></div>
-    <div class="card"><h4>Civil Litigation</h4><p>Property, Recovery, Injunctions.</p></div>
-    <div class="card"><h4>Banking Law</h4><p>Cheque Bounce, DRT, SARFAESI.</p></div>
-    <div class="card"><h4>Legal Notices</h4><p>Drafting & Replies.</p></div>
-    <div class="card"><h4>Family Law</h4><p>Marriage, Divorce, Maintenance.</p></div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section>
-  <div class="section-title">
-    <h3>Contact & Consultation</h3>
-    <p>Get professional legal assistance</p>
-  </div>
-
-  <div class="contact">
-    <div class="contact-grid">
-      <div>
-        <p>📞 <strong>7903801274</strong></p>
-        <p>💬 WhatsApp: <strong>8929555414</strong></p>
-        <p>📧 advraj.krr@gmail.com</p>
-        <p>📍 Delhi High Court & District Courts</p>
-      </div>
-
-      <form>
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Email">
-        <input type="text" placeholder="Phone Number">
-        <textarea rows="4" placeholder="Brief about your case"></textarea>
-        <button type="submit">Request Consultation</button>
-      </form>
-    </div>
+    <div class="card">Criminal Law & Bail Matters</div>
+    <div class="card">Civil Litigation & Property Disputes</div>
+    <div class="card">Banking & Cheque Bounce Matters</div>
+    <div class="card">Family & Matrimonial Law</div>
   </div>
 </section>
 
 <footer>
-  © 2025 Adv. Raj Kumar | All Rights Reserved<br>
-  <a href="disclaimer.html">Disclaimer</a>
+  © 2025 Adv. Raj Kumar | All Rights Reserved
 </footer>
 
 <!-- WHATSAPP FLOAT -->
@@ -353,3 +248,5 @@ footer a{color:var(--secondary);text-decoration:none}
 
 </body>
 </html>
+
+
