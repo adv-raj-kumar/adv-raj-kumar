@@ -28,15 +28,8 @@ header{
   padding:18px 30px;
 }
 
-header h1{
-  font-size:22px;
-  font-weight:600;
-}
-
-header span{
-  font-size:13px;
-  opacity:.9;
-}
+header h1{font-size:22px;font-weight:600}
+header span{font-size:13px;opacity:.9}
 
 /* HERO */
 .hero{
@@ -54,23 +47,12 @@ header span{
   align-items:center;
 }
 
-.hero-text{
-  flex:1;
-}
+.hero-text{flex:1}
 
-.hero-text h2{
-  font-size:32px;
-  margin-bottom:12px;
-}
+.hero-text h2{font-size:32px;margin-bottom:12px}
+.hero-text p{font-size:16px;opacity:.95}
 
-.hero-text p{
-  font-size:16px;
-  opacity:.95;
-}
-
-.buttons{
-  margin-top:20px;
-}
+.buttons{margin-top:20px}
 
 .btn{
   display:inline-block;
@@ -106,9 +88,7 @@ header span{
 }
 
 /* PRACTICE AREAS */
-.section{
-  padding:60px 20px;
-}
+.section{padding:60px 20px}
 
 .section h2{
   text-align:center;
@@ -133,15 +113,8 @@ header span{
   text-align:center;
 }
 
-.practice-card h3{
-  color:var(--primary);
-  margin-bottom:12px;
-}
-
-.practice-card p{
-  font-size:14px;
-  margin-bottom:15px;
-}
+.practice-card h3{color:var(--primary);margin-bottom:12px}
+.practice-card p{font-size:14px;margin-bottom:15px}
 
 .practice-card a{
   display:inline-block;
@@ -153,7 +126,7 @@ header span{
   font-weight:600;
 }
 
-/* CONSULTATION / CONTACT SECTION */
+/* CONSULTATION */
 .consult-section{
   background:#0b3c5d;
   padding:70px 20px;
@@ -195,15 +168,8 @@ header span{
   font-weight:600;
 }
 
-.consult-btn.call{
-  background:#0b3c5d;
-  color:#fff;
-}
-
-.consult-btn.whatsapp{
-  background:#25D366;
-  color:#fff;
-}
+.consult-btn.call{background:#0b3c5d;color:#fff}
+.consult-btn.whatsapp{background:#25D366;color:#fff}
 
 /* FOOTER */
 footer{
@@ -228,54 +194,70 @@ footer{
   justify-content:center;
   box-shadow:0 6px 18px rgba(0,0,0,.35);
   z-index:9999;
-  -webkit-tap-highlight-color:transparent;
 }
 
-.whatsapp-float img{
-  width:32px;
-  height:32px;
+/* DISCLAIMER POPUP */
+#disclaimerModal{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,.7);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:10000;
 }
 
-.whatsapp-float:active{
-  transform:scale(.95);
+.disclaimer-box{
+  background:#fff;
+  max-width:600px;
+  padding:30px;
+  border-radius:10px;
+}
+
+.disclaimer-box h2{
+  color:#0b3c5d;
+  margin-bottom:15px;
+}
+
+.disclaimer-box p{
+  font-size:14px;
+  line-height:1.6;
+  margin-bottom:12px;
+}
+
+.disclaimer-box button{
+  background:#0b3c5d;
+  color:#fff;
+  border:none;
+  padding:10px 20px;
+  border-radius:5px;
+  cursor:pointer;
+  font-weight:600;
 }
 </style>
 </head>
 
 <body>
 
-
-<!-- DISCLAIMER START -->
+<!-- DISCLAIMER -->
 <div id="disclaimerModal">
   <div class="disclaimer-box">
     <h2>Disclaimer</h2>
-
     <p>
-      As per the rules of the Bar Council of India, the contents of this website
-      are for informational purposes only and do not constitute advertisement
-      or solicitation.
+      As per the rules of the Bar Council of India, this website does not
+      constitute advertisement or solicitation.
     </p>
-
     <p>
-      By accessing this website, the viewer acknowledges that they are seeking
-      information voluntarily and that no form of inducement or solicitation
-      has been made by the advocate.
+      The information is accessed voluntarily for general informational purposes only.
     </p>
-
     <p>
-      The information provided on this website does not create a lawyer-client
-      relationship and should not be considered legal advice.
+      No lawyer–client relationship is created by accessing this website.
     </p>
-
     <button onclick="acceptDisclaimer()">I Agree</button>
   </div>
 </div>
-<!-- DISCLAIMER END -->
 
-<header>
-  <h1>Adv. Raj Kumar</h1>
-  <span>Delhi High Court & District Courts</span>
-</header>
 <header>
   <h1>Adv. Raj Kumar</h1>
   <span>Delhi High Court & District Courts</span>
@@ -295,7 +277,6 @@ footer{
         <a href="index.html" class="btn">🏠 Home</a>
         <a href="civil.html" class="btn">⚖ Civil Matters</a>
         <a href="criminal.html" class="btn">🚔 Criminal Matters</a>
-        <a href="contact.html" class="btn">📍 Contact</a>
         <a href="https://wa.me/918929555414" class="btn whatsapp">💬 WhatsApp</a>
       </div>
     </div>
@@ -319,13 +300,11 @@ footer{
     <div class="practice-card">
       <h3>Criminal Law & Bail</h3>
       <p>Defense, bail, FIR quashing, trial and appeals.</p>
-      <a href="criminal.html">Read More</a>
     </div>
 
     <div class="practice-card">
       <h3>Civil Litigation</h3>
       <p>Injunctions, recovery suits and civil disputes.</p>
-      <a href="civil.html">Read More</a>
     </div>
 
     <div class="practice-card">
@@ -340,13 +319,12 @@ footer{
   </div>
 </section>
 
-<section class="consult-section" id="contact">
+<section class="consult-section">
   <div class="consult-box">
     <h2>Consultation & Contact</h2>
     <p>
-      For professional legal consultation and appointment requests,
-      please connect through phone call or WhatsApp.
-      All consultations are strictly by prior appointment.
+      For professional legal consultation, please connect by phone or WhatsApp.
+      Consultations are strictly by prior appointment.
     </p>
 
     <div class="consult-buttons">
@@ -357,16 +335,17 @@ footer{
 </section>
 
 <footer>
-  © 2025 Adv. Raj Kumar | Delhi High Court & District Courts  
-  <br>
-  Disclaimer: This website is for informational purposes only and does not constitute
-  solicitation or legal advice.
+  © 2025 Adv. Raj Kumar | Delhi High Court & District Courts<br>
+  Disclaimer: This website is for informational purposes only.
 </footer>
 
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/918929555414" class="whatsapp-float" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
+<a href="https://wa.me/918929555414" class="whatsapp-float" target="_blank"></a>
+
+<script>
+function acceptDisclaimer(){
+  document.getElementById("disclaimerModal").style.display = "none";
+}
+</script>
 
 </body>
 </html>
